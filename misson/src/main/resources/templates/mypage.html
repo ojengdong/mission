@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>마이페이지</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+	<link rel="stylesheet" th:href="@{/css/mypage.css}">
+</head>
+
+<body>
+	<div class="pageWrap">
+		<aside>
+			<div class="logOut">
+				<h4>로그아웃</h4>
+			</div>
+
+			<div class="userProfileBox">
+				<div class="userProfile">
+					<div class="userIcon">
+						<p><i class="fa fa-user fa-2x"></i></p>
+					</div>
+					<div class="userBtnBox">
+						<button type="button" class="profileBtn userBtn">프로필 수정</button>
+						<button type="button" class="privacyBtn userBtn">회원정보 수정</button>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="side">
+				<button type="button"><a href="">홈(마이페이지)</a></button>
+				<button type="button"><a href="">미션</a></button>
+				<button class="friendOpenBtn" type="button">친구 리스트</button>
+
+			</div>
+			<div class="friend-listModal">
+				<p>친구1</p>
+				<p>친구2</p>
+				<p>친구3</p>
+				<p>친구4</p>
+				<button class="friendCloseBtn" type="button">닫기</button>
+			</div>
+
+		</aside>
+
+		<main>
+			<div class="main-profile">
+				<div class="profileBox">
+					<div class="mainIcon">
+						<p><i class="fa fa-user fa-2x"></i></p>
+					</div>
+
+					<div class="mainNumber">
+						<div class="achievementBox">
+							<p class="achievement Num">성취율</p>
+						</div>
+
+						<div class="teamMisBox">
+							<p class="teamMis Num">단체미션 갯수</p>
+						</div>
+
+						<div class="individualBox">
+							<p class="individual Num">개인미션 갯수</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="calendarBox">
+
+				</div>
+
+				<div class="todoBox">
+					<div class="bucket todo">
+						<p>버킷리스트(버킷리스트를 작성해주세요) <i class="fa fa-pen"></i> </p>
+					</div>
+
+					<div class="memo todo">
+						<p>할 일 메모</p>
+					</div>
+
+					<div class="mission todo">
+						<p>미션 중(개인/단체)</p>
+					</div>
+
+					<div class="complete todo">
+						<p>미션 달성(개인/단체)</p>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	
+	<script>
+		let friendModal = document.querySelector(".friend-listModal");
+		let friendCloseBtn = document.querySelector(".friendCloseBtn");
+		let friendOpenBtn = document.querySelector(".friendOpenBtn");
+		
+		friendOpenBtn.addEventListener("click", ()=>{
+			friendModal.style.display = "block";
+		});
+		
+		friendCloseBtn.addEventListener("click", ()=>{
+			friendModal.style.display = "none";
+		});
+	</script>
+</body>
+
+</html>

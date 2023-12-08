@@ -1,0 +1,59 @@
+.sign-wrapper {
+	width: 100%;
+}
+
+h1 {
+	margin-bottom: 30px;
+	font-size: 40px;
+	font-weight: 370;
+}
+
+form {
+	width: 30%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+label {
+	display: block;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="birth"],
+input[type="nickname"],
+input[type="id"],
+input[type="password"],
+input[type="email"] {
+	display: block;
+	width: 96%;
+	padding: 10px;
+	border: 1px solid #5D8BFF;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.button-container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+input[type="submit"] {
+	background-color: #5D8BFF;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 10px;
+	width: 40%;
+}
+
+input[type="submit"]:hover {
+	background-color: #3D7BFF;
+
+}
+

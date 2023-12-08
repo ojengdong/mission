@@ -5,10 +5,16 @@
 	<title>달력 만들기 예제 1</title>
 </head>
 <body>
-	<h2>서버시간 : [[${serverTime}]]</h2>
-	<h2>서버시간 : [[${#dates.format(serverTime,'yy-MM-dd hh:mm:ss')}]]</h2>
-
-	<a th:href="@{/ex01/{year}/{month}(year=${year},month=${month})}">첫번째 예제</a>	
-
+	<button>
+		<a th:href="@{/mypage}">마이페이지 이동</a>
+	</button>
+	
+	<button>
+		<a th:href="@{/signup}">회원가입페이지 이동</a>
+	</button>
+	
+	<button>
+		<a th:href="@{/agree}">개인정보동의페이지 이동</a>
+	</button>
 </body>
 </html>
